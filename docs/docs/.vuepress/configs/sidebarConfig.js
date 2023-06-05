@@ -12,14 +12,16 @@ const docsNav = [
       "/workflows/steps/using-props/",
       "/workflows/events/",
       "/workflows/events/inspect/",
-      "/workflows/built-in-functions/",
+      "/workflows/flow-control/",
       "/workflows/errors/",
       "/workflows/concurrency-and-throttling/",
       "/workflows/settings/",
       "/workflows/networking/",
+      "/workflows/sharing/",
       "/migrate-from-v1/",
     ],
   },
+  "/event-history/",
   "/sources/",
   "/connected-accounts/",
   ["/data-stores/", "Data Stores"],
@@ -30,6 +32,8 @@ const docsNav = [
       {
         title: "Node.js",
         type: "group",
+        collapsable: false,
+        sidebarDepth: 2,
         children: [
           "/code/nodejs/",
           "/code/nodejs/auth/",
@@ -40,18 +44,21 @@ const docsNav = [
           "/code/nodejs/rerun/",
           "/environment-variables/",
           "/code/nodejs/async/",
-          "/code/nodejs/sharing-code/",
+          "/code/nodejs/sharing-code/"
         ],
       },
       {
         title: "Python",
         type: "group",
+        collapsable: false,
+        sidebarDepth: 2,
         children: [
           "/code/python/",
           "/code/python/auth/",
           "/code/python/using-data-stores/",
           "/code/python/rerun/",
           "/code/python/import-mappings/",
+          "/code/python/faqs/",
         ],
       },
       "/code/go/",
@@ -64,18 +71,26 @@ const docsNav = [
       "/environment-variables/",
     ],
   },
+  "/http/",
   {
     title: "Integrations",
     type: "group",
     children: [
-      "/apps/all-apps/",
-      "/apps/discord/",
-      "/apps/hubspot/",
-      "/apps/servicenow/",
-      "/apps/slack/",
-      "/apps/strava/",
-      "/apps/twitter/",
-      "/apps/zoom/",
+      "/apps/",
+      "/apps/contributing/",
+      {
+        title: "Components",
+        type: "group",
+        collapsable: false,
+        children: [
+          "/components/",
+          "/components/quickstart/nodejs/actions/",
+          "/components/quickstart/nodejs/sources/",
+          "/pipedream-axios/",
+          "/components/typescript/",
+          "/components/guidelines/",
+        ],
+      },
     ],
   },
   ["/troubleshooting/", "Troubleshooting"],
@@ -83,25 +98,17 @@ const docsNav = [
   {
     title: "Workspaces",
     children: [
-      "/workspaces/", 
+      "/workspaces/",
       "/workspaces/sso/google/",
-      "/workspaces/sso/okta/"
+      "/workspaces/sso/okta/",
     ],
   },
 ];
 
 const referenceNav = [
   {
-    title: "Components",
-    children: [
-      "/components/",
-      "/components/quickstart/nodejs/actions/",
-      "/components/quickstart/nodejs/sources/",
-      "/components/api/",
-      "/components/guidelines/",
-      "/pipedream-axios/",
-      "/components/typescript/",
-    ],
+    title: "Components API",
+    children: ["/components/api/"],
   },
   {
     title: "CLI",
@@ -138,11 +145,7 @@ const pricingNav = ["/pricing/"];
 
 module.exports = {
   // reference nav
-  "/components/": referenceNav,
-  "/components/quickstart/nodejs/actions/": referenceNav,
-  "/components/quickstart/nodejs/sources/": referenceNav,
   "/components/api/": referenceNav,
-  "/components/guidelines/": referenceNav,
   "/pipedream-axios/": referenceNav,
   "/api/": referenceNav,
   "/api/auth/": referenceNav,
